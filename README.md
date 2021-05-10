@@ -464,7 +464,7 @@ The workspace contains three files:
         )
     ```
 
-## Implementation - model.py <a name="openai_lunarlander"></a>
+## Implementation - model.py <a name="impl_model"></a>
 - Open Python file ```model.py```
     ```
     import torch.nn as nn
