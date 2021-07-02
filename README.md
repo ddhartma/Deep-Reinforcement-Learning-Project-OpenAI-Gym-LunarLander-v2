@@ -13,11 +13,11 @@
 - [Acknowledgments](#Acknowledgments)
 - [Further Links](#Further_Links)
 
-## Introduction <a name="what_is_reinforcement"></a>
+## Introduction <a id="what_is_reinforcement"></a>
 - Reinforcement learning is **learning** what to do — **how to map situations to actions** — so as **to maximize a numerical reward** signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them. (Sutton and Barto, [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html))
 - Deep reinforcement learning refers to approaches where the knowledge is represented with a deep neural network
 
-## OpenAI Gym - LunarLander-v2 - environment <a name="openai_lunarlander"></a>
+## OpenAI Gym - LunarLander-v2 - environment <a id="openai_lunarlander"></a>
 - Link to [LunarLander-v2](https://gym.openai.com/envs/LunarLander-v2/)
 - [Source Code](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py) on Github
 
@@ -41,14 +41,14 @@
     - fire main engine, 
     - fire right orientation engine.
 
-## Files in the repo <a name="files"></a>
+## Files in the repo <a id="files"></a>
 The workspace contains three files:
 - **deep_q_network.ipynb**: Main file to implement DQN, notebook.
 - **dqn_agent.py**: The reinforcement learning agent is developed.
 - **model.py**: The interact function tests how well the agent learns from interaction with the environment.
 
 
-## Implementation - dqn_agent.py <a name="impl_notebook"></a>
+## Implementation - dqn_agent.py <a id="impl_notebook"></a>
 - Open Python file ```deep_q_network.ipynb```
     ```
     import gym
@@ -186,7 +186,7 @@ The workspace contains three files:
     ```
 
 
-## Implementation - dqn_agent.py <a name="impl_agent"></a>
+## Implementation - dqn_agent.py <a id="impl_agent"></a>
 - Open Python file ```dqn_agent.py```
     ```
     import numpy as np
@@ -464,7 +464,7 @@ The workspace contains three files:
         )
     ```
 
-## Implementation - model.py <a name="impl_model"></a>
+## Implementation - model.py <a id="impl_model"></a>
 - Open Python file ```model.py```
     ```
     import torch.nn as nn
@@ -513,12 +513,12 @@ The workspace contains three files:
     ```
    
 
-## Setup Instructions <a name="Setup_Instructions"></a>
+## Setup Instructions <a id="Setup_Instructions"></a>
 The following is a brief set of instructions on setting up a cloned repository.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a name="Prerequisites"></a>
+### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a id="Prerequisites"></a>
 - Install [Anaconda](https://www.anaconda.com/distribution/). Install Python 3.7 - 64 Bit
 
 - Upgrade Anaconda via
@@ -532,7 +532,7 @@ $ conda upgrade --all
 $ export PATH="/path/to/anaconda/bin:$PATH"
 ```
 
-### Clone the project <a name="Clone_the_project"></a>
+### Clone the project <a id="Clone_the_project"></a>
 - Open your Command Line Interface
 - Change Directory to your project older, e.g. `cd my_github_projects`
 - Clone the Github Project inside this folder with Git Bash (Terminal) via:
@@ -576,10 +576,10 @@ $ conda env list
     python main.py
     ```
 
-## Acknowledgments <a name="Acknowledgments"></a>
-* This project is part of the Udacity Nanodegree program 'Data Science'. Please check this [link](https://www.udacity.com) for more information.
+## Acknowledgments <a id="Acknowledgments"></a>
+* This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com) for more information.
 
-## Further Links <a name="Further_Links"></a>
+## Further Links <a id="Further_Links"></a>
 
 Git/Github
 * [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
@@ -592,9 +592,39 @@ Docstrings, DRY, PEP8
 * [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 
 Further Deep Reinforcement Learning References
+* [Very good summary of DQN](https://medium.com/@nisheed/udacity-deep-reinforcement-learning-project-1-navigation-d16b43793af5)
+* [An Introduction to Deep Reinforcement Learning](https://thomassimonini.medium.com/an-introduction-to-deep-reinforcement-learning-17a565999c0c)
+* Helpful medium blog post on policies [Off-policy vs On-Policy vs Offline Reinforcement Learning Demystified!](https://kowshikchilamkurthy.medium.com/off-policy-vs-on-policy-vs-offline-reinforcement-learning-demystified-f7f87e275b48)
+* [Understanding Baseline Techniques for REINFORCE](https://medium.com/@fork.tree.ai/understanding-baseline-techniques-for-reinforce-53a1e2279b57)
 * [Cheatsheet](https://raw.githubusercontent.com/udacity/deep-reinforcement-learning/master/cheatsheet/cheatsheet.pdf)
+* [Reinforcement Learning Cheat Sheet](https://towardsdatascience.com/reinforcement-learning-cheat-sheet-2f9453df7651)
 * [Reinforcement Learning Textbook](https://s3-us-west-1.amazonaws.com/udacity-drlnd/bookdraft2018.pdf)
 * [Reinforcement Learning Textbook - GitHub Repo to Python Examples](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction)
 * [Udacity DRL Github Repository](https://github.com/udacity/deep-reinforcement-learning)
 * [Open AI Gym - Installation Guide](https://github.com/openai/gym#installation)
 * [Deep Reinforcement Learning Nanodegree Links](https://docs.google.com/spreadsheets/d/19jUvEO82qt3itGP3mXRmaoMbVOyE6bLOp5_QwqITzaM/edit#gid=0)
+
+Important publications
+* [2004 Y. Ng et al., Autonomoushelicopterflightviareinforcementlearning --> Inverse Reinforcement Learning](https://people.eecs.berkeley.edu/~jordan/papers/ng-etal03.pdf)
+* [2004 Kohl et al., Policy Gradient Reinforcement Learning for FastQuadrupedal Locomotion --> Policy Gradient Methods](https://www.cs.utexas.edu/~pstone/Papers/bib2html-links/icra04.pdf)
+* [2013-2015, Mnih et al. Human-level control through deep reinforcementlearning --> DQN](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
+* [2014, Silver et al., Deterministic Policy Gradient Algorithms --> DPG](http://proceedings.mlr.press/v32/silver14.html)
+* [2015, Lillicrap et al., Continuous control with deep reinforcement learning --> DDPG](https://arxiv.org/abs/1509.02971)
+* [2015, Schulman et al, High-Dimensional Continuous Control Using Generalized Advantage Estimation --> GAE](https://arxiv.org/abs/1506.02438)
+* [2016, Schulman et al., Benchmarking Deep Reinforcement Learning for Continuous Control --> TRPO and GAE](https://arxiv.org/abs/1604.06778)
+* [2017, PPO](https://openai.com/blog/openai-baselines-ppo/)
+* [2018, Bart-Maron et al., Distributed Distributional Deterministic Policy Gradients](https://openreview.net/forum?id=SyZipzbCb)
+* [2013, Sergey et al., Guided Policy Search --> GPS](https://graphics.stanford.edu/projects/gpspaper/gps_full.pdf)
+* [2015, van Hasselt et al., Deep Reinforcement Learning with Double Q-learning --> DDQN](https://arxiv.org/abs/1509.06461)
+* [1993, Truhn et al., Issues in Using Function Approximation for Reinforcement Learning](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf)
+* [2015, Schaul et al., Prioritized Experience Replay --> PER](https://arxiv.org/abs/1511.05952)
+* [2015, Wang et al., Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/abs/1511.06581)
+* [2016, Silver et al., Mastering the game of Go with deep neural networks and tree search](https://www.researchgate.net/publication/292074166_Mastering_the_game_of_Go_with_deep_neural_networks_and_tree_search)
+* [2017, Hessel et al. Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/abs/1710.02298)
+* [2016, Mnih et al., Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/abs/1602.01783)
+* [2017, Bellemare et al., A Distributional Perspective on Reinforcement Learning](https://arxiv.org/abs/1707.06887)
+* [2017, Fortunato et al., Noisy Networks for Exploration](https://arxiv.org/abs/1706.10295)
+* [2016, Wang et al., Sample Efficient Actor-Critic with Experience Replay --> ACER](https://arxiv.org/abs/1611.01224)
+* [2017, Lowe et al. Multi-Agent Actor-Critic for MixedCooperative-Competitive Environments](https://papers.nips.cc/paper/2017/file/68a9750337a418a86fe06c1991a1d64c-Paper.pdf)
+* [2017, Silver et al. Mastering the Game of Go without Human Knowledge --> AlphaGo Zero](https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf)
+* [2017, Silver et al., Mastering Chess and Shogi by Self-Play with aGeneral Reinforcement Learning Algorithm --> AlphaZero](https://arxiv.org/pdf/1712.01815.pdf)
